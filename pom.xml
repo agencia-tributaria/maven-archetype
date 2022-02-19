@@ -42,7 +42,15 @@
   </description>
   <url>https://maven.apache.org/archetype</url>
   <inceptionYear>2007</inceptionYear>
-
+  
+  <distributionManagement>
+   <repository>
+     <id>upload</id>
+     <name>agencia-tributaria (organization) GitHub Apache Maven Packages</name>
+     <url>https://maven.pkg.github.com/agencia-tributaria/maven-archetype-plugin</url>
+   </repository>
+  </distributionManagement>
+  
   <modules>
     <module>archetype-models</module>
     <module>archetype-common</module>
