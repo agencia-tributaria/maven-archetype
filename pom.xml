@@ -31,7 +31,7 @@
 
   <groupId>org.apache.maven.archetype</groupId>
   <artifactId>maven-archetype</artifactId>
-  <version>3.2.2-SNAPSHOT</version>
+  <version>3.2.2</version>
   <packaging>pom</packaging>
 
   <name>Maven Archetype</name>
@@ -42,15 +42,7 @@
   </description>
   <url>https://maven.apache.org/archetype</url>
   <inceptionYear>2007</inceptionYear>
-  
-  <distributionManagement>
-   <repository>
-     <id>upload</id>
-     <name>agencia-tributaria/maven-archetype (GitHub repository) Maven Packages</name>
-     <url>https://maven.pkg.github.com/agencia-tributaria/maven-archetype</url>
-   </repository>
-  </distributionManagement>
-  
+    
   <modules>
     <module>archetype-models</module>
     <module>archetype-common</module>
@@ -58,30 +50,15 @@
     <module>archetype-packaging</module>
   </modules>
 
-  <scm>
-    <connection>${maven.archetype.scm.devConnection}</connection>
-    <developerConnection>${maven.archetype.scm.devConnection}</developerConnection>
-    <url>https://github.com/apache/maven-archetype/tree/${project.scm.tag}</url>
-    <tag>maven-archetype-3.2.1</tag>
-  </scm>
-  <issueManagement>
-    <system>jira</system>
-    <url>https://issues.apache.org/jira/browse/ARCHETYPE</url>
-  </issueManagement>
-  <ciManagement>
-    <system>Jenkins</system>
-    <url>https://ci-builds.apache.org/job/Maven/job/maven-box/job/maven-archetype/</url>
-  </ciManagement>
-
   <distributionManagement>
-    <site>
-      <id>apache.website</id>
-      <url>scm:svn:https://svn.apache.org/repos/asf/maven/website/components/${maven.site.path}</url>
-    </site>
+    <repository>
+      <id>upload</id>
+      <name>agencia-tributaria/maven-archetype (GitHub repository) Maven Packages</name>
+      <url>https://maven.pkg.github.com/agencia-tributaria/maven-archetype</url>
+    </repository>
   </distributionManagement>
 
   <properties>
-    <maven.archetype.scm.devConnection>scm:git:https://gitbox.apache.org/repos/asf/maven-archetype.git</maven.archetype.scm.devConnection>
     <mavenVersion>3.0</mavenVersion>
     <wagonVersion>3.3.3</wagonVersion><!-- provided by Maven core -->
     <javaVersion>7</javaVersion>
